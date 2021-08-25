@@ -21,7 +21,7 @@ public static void main(String[] args) {
 	
 
 	// 1. Set a password in a String variable
-String password = "Foot";	
+String password = "qwerty";	
 	// 2. Using a pop-up, ask the first person for a secret message and store it in a variable
 String secretMessage = JOptionPane.showInputDialog(null, "Tell me a secret message");
 	// 3. Now use a pop-up to tell the NEXT user that they can only see the secret message 
@@ -29,8 +29,12 @@ String secretMessage = JOptionPane.showInputDialog(null, "Tell me a secret messa
 String GuessPassword = JOptionPane.showInputDialog(null, "If you can Guess the password I will tell you a secret");
 	// 4. If their guess matches the password, show them the secret message
 if (GuessPassword.equals(password)) {
-	
+	JOptionPane.showMessageDialog(null, secretMessage);
+}
+else {
+	JOptionPane.showMessageDialog(null, "INTRUDER!!");
 }
 	// 5. If the password does not match, pop-up "INTRUDER!!"
 
+}
 }
